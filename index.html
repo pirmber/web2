@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Database Course Syllabus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Database Course Syllabus</h1>
+    </header>
+    <main>
+        <!-- Overview Table -->
+        <section class="overview">
+            <h2>Course Overview</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.N.</th>
+                        <th>Topic</th>
+                        <th>Content-wise Marks</th>
+                        <th>Working Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Database Management System</td><td>8</td><td>12</td></tr>
+                    <tr><td>2</td><td>Data Communication & Networking</td><td>9</td><td>15</td></tr>
+                    <tr><td>3</td><td>Web Technology II</td><td>8</td><td>12</td></tr>
+                    <tr><td>4</td><td>C Programming II</td><td>8</td><td>12</td></tr>
+                    <tr><td>5</td><td>Object Oriented Programming</td><td>6</td><td>10</td></tr>
+                    <tr><td>6</td><td>Software Development Life Cycle</td><td>6</td><td>10</td></tr>
+                    <tr><td>7</td><td>Recent Trends in Technology</td><td>5</td><td>9</td></tr>
+                    <tr><td colspan="2"><strong>Total</strong></td><td><strong>50</strong></td><td><strong>80</strong></td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Detailed Topics -->
+        <section class="content">
+            <h2>Detailed Topic Descriptions</h2>
+
+            <article id="data">
+                <h3>Data</h3>
+                <p>Data refers to raw facts and figures, such as numbers, characters, images, or any other output that can be processed by a computer. It has no meaning on its own until processed and interpreted.</p>
+            </article>
+
+            <article id="information">
+                <h3>Information</h3>
+                <p>Information is processed data that is meaningful and useful for decision-making. It is data that has been organized, structured, or presented in a context that gives it meaning.</p>
+            </article>
+
+            <article id="features-information">
+                <h3>Features of Information</h3>
+                <ul>
+                    <li><strong>Accuracy:</strong> Information must be correct and reliable.</li>
+                    <li><strong>Timeliness:</strong> Information should be available when needed.</li>
+                    <li><strong>Relevance:</strong> It must relate to the purpose at hand.</li>
+                    <li><strong>Completeness:</strong> Should contain all necessary details.</li>
+                    <li><strong>Consistency:</strong> Information should be consistent across sources.</li>
+                </ul>
+            </article>
+
+            <article id="database-purpose">
+                <h3>Database and Its Purpose</h3>
+                <p>A database is an organized collection of related data. Its purpose is to store, manage, retrieve, and update large amounts of data efficiently.</p>
+            </article>
+
+            <article id="terminologies">
+                <h3>Terminologies in Database</h3>
+                <ul>
+                    <li><strong>Table:</strong> A collection of records in rows and columns.</li>
+                    <li><strong>Field:</strong> A column in a table; a specific attribute.</li>
+                    <li><strong>Record:</strong> A row in a table; a single data item.</li>
+                    <li><strong>Tuple:</strong> Another term for a record.</li>
+                    <li><strong>Object:</strong> A data entity in object-oriented databases.</li>
+                    <li><strong>Key:</strong> A field or set of fields used to identify records uniquely.</li>
+                </ul>
+            </article>
+
+            <article id="data-dictionary">
+                <h3>Data Dictionary</h3>
+                <p>A data dictionary is a centralized repository of metadata, describing the structure, relationships, and constraints of data stored in the database.</p>
+            </article>
+
+            <article id="dbms">
+                <h3>Database Management System</h3>
+                <h4>Introduction</h4>
+                <p>DBMS is software for creating, managing, and interacting with databases. It provides an interface between applications and the data.</p>
+                <h4>Objectives</h4>
+                <ul>
+                    <li>Provide efficient data storage and retrieval.</li>
+                    <li>Ensure data integrity and security.</li>
+                    <li>Support concurrent access.</li>
+                </ul>
+                <h4>Advantages</h4>
+                <ul>
+                    <li>Data independence</li>
+                    <li>Reduced data redundancy</li>
+                    <li>Improved data sharing</li>
+                </ul>
+                <h4>Disadvantages</h4>
+                <ul>
+                    <li>Complexity and cost</li>
+                    <li>Performance overhead</li>
+                </ul>
+            </article>
+
+            <article id="db-models">
+                <h3>Types of Database Model</h3>
+                <ul>
+                    <li><strong>Hierarchical:</strong> Tree-like structure with parent-child relationships.</li>
+                    <li><strong>Network:</strong> Graph-based structure allowing many-to-many relationships.</li>
+                    <li><strong>Relational:</strong> Data represented in tables, linked by keys.</li>
+                    <li><strong>Entity-Relationship:</strong> Conceptual model depicting entities and relationships.</li>
+                </ul>
+            </article>
+
+            <article id="integrity-constraints">
+                <h3>Integrity Constraints and Types</h3>
+                <ul>
+                    <li><strong>Domain Constraint:</strong> Valid values for a given attribute.</li>
+                    <li><strong>Entity Integrity:</strong> Primary key cannot be null.</li>
+                    <li><strong>Referential Integrity:</strong> Foreign key must match a primary key in another table.</li>
+                    <li><strong>Key Constraints:</strong> Uniqueness of keys.</li>
+                </ul>
+            </article>
+
+            <article id="normalization">
+                <h3>Normalization</h3>
+                <h4>Introduction</h4>
+                <p>Normalization is the process of organizing data to minimize redundancy and dependency.</p>
+                <h4>Normal Forms</h4>
+                <ul>
+                    <li><strong>1NF:</strong> Eliminate repeating groups.</li>
+                    <li><strong>2NF:</strong> Remove partial dependencies.</li>
+                    <li><strong>3NF:</strong> Remove transitive dependencies.</li>
+                </ul>
+                <h4>Advantages</h4>
+                <ul>
+                    <li>Reduces redundancy</li>
+                    <li>Increases data integrity</li>
+                </ul>
+                <h4>Disadvantages</h4>
+                <ul>
+                    <li>Can be complex</li>
+                    <li>May require more joins</li>
+                </ul>
+            </article>
+
+            <article id="centralized-distributed">
+                <h3>Centralized and Distributed Database</h3>
+                <h4>Introduction</h4>
+                <p>Centralized DB stores data at a single location; distributed DB stores data across multiple sites.</p>
+                <h4>Advantages</h4>
+                <ul>
+                    <li>Centralized: Easier control.</li>
+                    <li>Distributed: Fault tolerance, local autonomy.</li>
+                </ul>
+                <h4>Disadvantages</h4>
+                <ul>
+                    <li>Centralized: Single point of failure.</li>
+                    <li>Distributed: Complex management.</li>
+                </ul>
+                <h4>Comparison</h4>
+                <p>Distribution improves availability, but adds complexity in synchronization and management.</p>
+            </article>
+
+            <article id="db-security">
+                <h3>Database Security</h3>
+                <h4>Introduction</h4>
+                <p>Database security protects data from unauthorized access and threats.</p>
+                <h4>Challenges</h4>
+                <ul>
+                    <li>SQL injection</li>
+                    <li>Unauthorized access</li>
+                    <li>Data breaches</li>
+                </ul>
+                <h4>Security Measures</h4>
+                <ul>
+                    <li>Authentication and authorization</li>
+                    <li>Encryption</li>
+                    <li>Auditing and monitoring</li>
+                </ul>
+                <h4>Roles of DBA</h4>
+                <ul>
+                    <li>Backup and recovery management</li>
+                    <li>User management</li>
+                    <li>Performance tuning</li>
+                </ul>
+            </article>
+
+            <article id="practical-topics">
+                <h2>Practical Topics</h2>
+                <h3>DDL and DML Languages</h3>
+                <p>DDL (Data Definition Language) includes commands like <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>. DML (Data Manipulation Language) includes <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</p>
+                <h3>SQL Data Types</h3>
+                <ul>
+                    <li>CHAR</li><li>VARCHAR</li><li>BINARY</li><li>VARBINARY</li><li>TINYBLOB</li><li>TINYTEXT</li>
+                    <li>TEXT</li><li>LONGTEXT</li><li>ENUM</li><li>BIT</li><li>TINYINT</li><li>BOOLEAN</li>
+                    <li>INTEGER</li><li>FLOAT</li><li>DOUBLE</li><li>DECIMAL</li><li>DATE</li><li>DATETIME</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
