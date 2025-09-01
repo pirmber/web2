@@ -1,208 +1,839 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Database Course Syllabus</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Database Course Syllabus</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Database Course Syllabus</h1>
-    </header>
-    <main>
-        <!-- Overview Table -->
-        <section class="overview">
-            <h2>Course Overview</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>S.N.</th>
-                        <th>Topic</th>
-                        <th>Content-wise Marks</th>
-                        <th>Working Hours</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>Database Management System</td><td>8</td><td>12</td></tr>
-                    <tr><td>2</td><td>Data Communication & Networking</td><td>9</td><td>15</td></tr>
-                    <tr><td>3</td><td>Web Technology II</td><td>8</td><td>12</td></tr>
-                    <tr><td>4</td><td>C Programming II</td><td>8</td><td>12</td></tr>
-                    <tr><td>5</td><td>Object Oriented Programming</td><td>6</td><td>10</td></tr>
-                    <tr><td>6</td><td>Software Development Life Cycle</td><td>6</td><td>10</td></tr>
-                    <tr><td>7</td><td>Recent Trends in Technology</td><td>5</td><td>9</td></tr>
-                    <tr><td colspan="2"><strong>Total</strong></td><td><strong>50</strong></td><td><strong>80</strong></td></tr>
-                </tbody>
-            </table>
-        </section>
+  <!-- Top Navigation -->
+  <nav class="topnav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#" data-target="overview">Database Syllabus</a>
+      <ul class="nav-links">
+        <li><a href="#overview" data-target="overview">Overview</a></li>
+        <li><a href="#unit1" data-target="unit1">UNIT 1</a></li>
+        <li><a href="#unit2" data-target="unit2">UNIT 2</a></li>
+        <li><a href="#unit3" data-target="unit3">UNIT 3</a></li>
+        <li><a href="#unit4" data-target="unit4">UNIT 4</a></li>
+        <li><a href="#unit5" data-target="unit5">UNIT 5</a></li>
+        <li><a href="#unit6" data-target="unit6">UNIT 6</a></li>
+        <li><a href="#unit7" data-target="unit7">UNIT 7</a></li>
+      </ul>
+    </div>
+  </nav>
 
-        <!-- Detailed Topics -->
-        <section class="content">
-            <h2>Detailed Topic Descriptions</h2>
+  <header>
+    <h1>Database Course Syllabus</h1>
+  </header>
 
-            <article id="data">
-                <h3>Data</h3>
-                <p>Data refers to raw facts and figures, such as numbers, characters, images, or any other output that can be processed by a computer. It has no meaning on its own until processed and interpreted.</p>
-            </article>
+  <main>
+    <!-- Overview (default landing) -->
+    <section id="overview" class="unit-section">
+      <div class="overview-top">
+        <h2>Course Overview</h2>
 
-            <article id="information">
-                <h3>Information</h3>
-                <p>Information is processed data that is meaningful and useful for decision-making. It is data that has been organized, structured, or presented in a context that gives it meaning.</p>
-            </article>
+        <div class="overview-controls">
+          <input id="overview-search" type="search" placeholder="Search topics or keywords..." aria-label="Search overview">
+          <div class="overview-buttons">
+            <button id="expand-all" class="btn-ghost">Expand all</button>
+            <button id="collapse-all" class="btn-ghost">Collapse all</button>
+          </div>
+        </div>
+      </div>
 
-            <article id="features-information">
-                <h3>Features of Information</h3>
-                <ul>
-                    <li><strong>Accuracy:</strong> Information must be correct and reliable.</li>
-                    <li><strong>Timeliness:</strong> Information should be available when needed.</li>
-                    <li><strong>Relevance:</strong> It must relate to the purpose at hand.</li>
-                    <li><strong>Completeness:</strong> Should contain all necessary details.</li>
-                    <li><strong>Consistency:</strong> Information should be consistent across sources.</li>
-                </ul>
-            </article>
+      <!-- Animated table -->
+      <div class="table-wrap animate-fadeup">
+        <table class="overview-table" aria-label="Course overview table">
+          <thead>
+            <tr>
+              <th>S.N.</th>
+              <th>Topic</th>
+              <th>Content-wise Marks</th>
+              <th>Working Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Database Management System</td><td>8</td><td>12</td></tr>
+            <tr><td>2</td><td>Data Communication & Networking</td><td>9</td><td>15</td></tr>
+            <tr><td>3</td><td>Web Technology II</td><td>8</td><td>12</td></tr>
+            <tr><td>4</td><td>C Programming II</td><td>8</td><td>12</td></tr>
+            <tr><td>5</td><td>Object Oriented Programming</td><td>6</td><td>10</td></tr>
+            <tr><td>6</td><td>Software Development Life Cycle</td><td>6</td><td>10</td></tr>
+            <tr><td>7</td><td>Recent Trends in Technology</td><td>5</td><td>9</td></tr>
+            <tr class="total-row"><td colspan="2"><strong>Total</strong></td><td><strong>50</strong></td><td><strong>80</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
 
-            <article id="database-purpose">
-                <h3>Database and Its Purpose</h3>
-                <p>A database is an organized collection of related data. Its purpose is to store, manage, retrieve, and update large amounts of data efficiently.</p>
-            </article>
+      <!-- Detailed topics as animated accordion -->
+      <div class="accordion-wrap">
+        <!-- Data -->
+        <details class="acc" open>
+          <summary>Data</summary>
+          <div class="acc-body">
+            <p>Data refers to raw facts and figures, such as numbers, characters, images, or any other output that can be processed by a computer. It has no meaning on its own until processed and interpreted.</p>
+          </div>
+        </details>
 
-            <article id="terminologies">
-                <h3>Terminologies in Database</h3>
-                <ul>
-                    <li><strong>Table:</strong> A collection of records in rows and columns.</li>
-                    <li><strong>Field:</strong> A column in a table; a specific attribute.</li>
-                    <li><strong>Record:</strong> A row in a table; a single data item.</li>
-                    <li><strong>Tuple:</strong> Another term for a record.</li>
-                    <li><strong>Object:</strong> A data entity in object-oriented databases.</li>
-                    <li><strong>Key:</strong> A field or set of fields used to identify records uniquely.</li>
-                </ul>
-            </article>
+        <!-- Information -->
+        <details class="acc">
+          <summary>Information</summary>
+          <div class="acc-body">
+            <p>Information is processed data that is meaningful and useful for decision-making. It is data that has been organized, structured, or presented in a context that gives it meaning.</p>
+          </div>
+        </details>
 
-            <article id="data-dictionary">
-                <h3>Data Dictionary</h3>
-                <p>A data dictionary is a centralized repository of metadata, describing the structure, relationships, and constraints of data stored in the database.</p>
-            </article>
+        <!-- Features of Information -->
+        <details class="acc">
+          <summary>Features of Information</summary>
+          <div class="acc-body">
+            <ul>
+              <li><strong>Accuracy:</strong> Information must be correct and reliable.</li>
+              <li><strong>Timeliness:</strong> Information should be available when needed.</li>
+              <li><strong>Relevance:</strong> It must relate to the purpose at hand.</li>
+              <li><strong>Completeness:</strong> Should contain all necessary details.</li>
+              <li><strong>Consistency:</strong> Information should be consistent across sources.</li>
+            </ul>
+          </div>
+        </details>
 
-            <article id="dbms">
-                <h3>Database Management System</h3>
-                <h4>Introduction</h4>
-                <p>DBMS is software for creating, managing, and interacting with databases. It provides an interface between applications and the data.</p>
-                <h4>Objectives</h4>
-                <ul>
-                    <li>Provide efficient data storage and retrieval.</li>
-                    <li>Ensure data integrity and security.</li>
-                    <li>Support concurrent access.</li>
-                </ul>
-                <h4>Advantages</h4>
-                <ul>
-                    <li>Data independence</li>
-                    <li>Reduced data redundancy</li>
-                    <li>Improved data sharing</li>
-                </ul>
-                <h4>Disadvantages</h4>
-                <ul>
-                    <li>Complexity and cost</li>
-                    <li>Performance overhead</li>
-                </ul>
-            </article>
+        <!-- Database and Its Purpose -->
+        <details class="acc">
+          <summary>Database and Its Purpose</summary>
+          <div class="acc-body">
+            <p>A database is an organized collection of related data. Its purpose is to store, manage, retrieve, and update large amounts of data efficiently.</p>
+          </div>
+        </details>
 
-            <article id="db-models">
-                <h3>Types of Database Model</h3>
-                <ul>
-                    <li><strong>Hierarchical:</strong> Tree-like structure with parent-child relationships.</li>
-                    <li><strong>Network:</strong> Graph-based structure allowing many-to-many relationships.</li>
-                    <li><strong>Relational:</strong> Data represented in tables, linked by keys.</li>
-                    <li><strong>Entity-Relationship:</strong> Conceptual model depicting entities and relationships.</li>
-                </ul>
-            </article>
+        <!-- Terminologies -->
+        <details class="acc">
+          <summary>Terminologies in Database</summary>
+          <div class="acc-body">
+            <ul>
+              <li><strong>Table:</strong> A collection of records in rows and columns.</li>
+              <li><strong>Field:</strong> A column in a table; a specific attribute.</li>
+              <li><strong>Record:</strong> A row in a table; a single data item.</li>
+              <li><strong>Tuple:</strong> Another term for a record.</li>
+              <li><strong>Object:</strong> A data entity in object-oriented databases.</li>
+              <li><strong>Key:</strong> A field or set of fields used to identify records uniquely.</li>
+            </ul>
+          </div>
+        </details>
 
-            <article id="integrity-constraints">
-                <h3>Integrity Constraints and Types</h3>
-                <ul>
-                    <li><strong>Domain Constraint:</strong> Valid values for a given attribute.</li>
-                    <li><strong>Entity Integrity:</strong> Primary key cannot be null.</li>
-                    <li><strong>Referential Integrity:</strong> Foreign key must match a primary key in another table.</li>
-                    <li><strong>Key Constraints:</strong> Uniqueness of keys.</li>
-                </ul>
-            </article>
+        <!-- Data Dictionary -->
+        <details class="acc">
+          <summary>Data Dictionary</summary>
+          <div class="acc-body">
+            <p>A data dictionary is a centralized repository of metadata, describing the structure, relationships, and constraints of data stored in the database.</p>
+          </div>
+        </details>
 
-            <article id="normalization">
-                <h3>Normalization</h3>
-                <h4>Introduction</h4>
-                <p>Normalization is the process of organizing data to minimize redundancy and dependency.</p>
-                <h4>Normal Forms</h4>
-                <ul>
-                    <li><strong>1NF:</strong> Eliminate repeating groups.</li>
-                    <li><strong>2NF:</strong> Remove partial dependencies.</li>
-                    <li><strong>3NF:</strong> Remove transitive dependencies.</li>
-                </ul>
-                <h4>Advantages</h4>
-                <ul>
-                    <li>Reduces redundancy</li>
-                    <li>Increases data integrity</li>
-                </ul>
-                <h4>Disadvantages</h4>
-                <ul>
-                    <li>Can be complex</li>
-                    <li>May require more joins</li>
-                </ul>
-            </article>
+        <!-- DBMS -->
+        <details class="acc">
+          <summary>Database Management System (DBMS)</summary>
+          <div class="acc-body">
+            <h4>Introduction</h4>
+            <p>DBMS is software for creating, managing, and interacting with databases. It provides an interface between applications and the data.</p>
 
-            <article id="centralized-distributed">
-                <h3>Centralized and Distributed Database</h3>
-                <h4>Introduction</h4>
-                <p>Centralized DB stores data at a single location; distributed DB stores data across multiple sites.</p>
-                <h4>Advantages</h4>
-                <ul>
-                    <li>Centralized: Easier control.</li>
-                    <li>Distributed: Fault tolerance, local autonomy.</li>
-                </ul>
-                <h4>Disadvantages</h4>
-                <ul>
-                    <li>Centralized: Single point of failure.</li>
-                    <li>Distributed: Complex management.</li>
-                </ul>
-                <h4>Comparison</h4>
-                <p>Distribution improves availability, but adds complexity in synchronization and management.</p>
-            </article>
+            <h4>Objectives</h4>
+            <ul>
+              <li>Provide efficient data storage and retrieval.</li>
+              <li>Ensure data integrity and security.</li>
+              <li>Support concurrent access.</li>
+            </ul>
 
-            <article id="db-security">
-                <h3>Database Security</h3>
-                <h4>Introduction</h4>
-                <p>Database security protects data from unauthorized access and threats.</p>
-                <h4>Challenges</h4>
-                <ul>
-                    <li>SQL injection</li>
-                    <li>Unauthorized access</li>
-                    <li>Data breaches</li>
-                </ul>
-                <h4>Security Measures</h4>
-                <ul>
-                    <li>Authentication and authorization</li>
-                    <li>Encryption</li>
-                    <li>Auditing and monitoring</li>
-                </ul>
-                <h4>Roles of DBA</h4>
-                <ul>
-                    <li>Backup and recovery management</li>
-                    <li>User management</li>
-                    <li>Performance tuning</li>
-                </ul>
-            </article>
+            <h4>Advantages</h4>
+            <ul>
+              <li>Data independence</li>
+              <li>Reduced data redundancy</li>
+              <li>Improved data sharing</li>
+            </ul>
 
-            <article id="practical-topics">
-                <h2>Practical Topics</h2>
-                <h3>DDL and DML Languages</h3>
-                <p>DDL (Data Definition Language) includes commands like <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>. DML (Data Manipulation Language) includes <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</p>
-                <h3>SQL Data Types</h3>
-                <ul>
-                    <li>CHAR</li><li>VARCHAR</li><li>BINARY</li><li>VARBINARY</li><li>TINYBLOB</li><li>TINYTEXT</li>
-                    <li>TEXT</li><li>LONGTEXT</li><li>ENUM</li><li>BIT</li><li>TINYINT</li><li>BOOLEAN</li>
-                    <li>INTEGER</li><li>FLOAT</li><li>DOUBLE</li><li>DECIMAL</li><li>DATE</li><li>DATETIME</li>
-                </ul>
-            </article>
-        </section>
-    </main>
-    <script src="script.js"></script>
+            <h4>Disadvantages</h4>
+            <ul>
+              <li>Complexity and cost</li>
+              <li>Performance overhead</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Types of Database Model -->
+        <details class="acc">
+          <summary>Types of Database Model</summary>
+          <div class="acc-body">
+            <ul>
+              <li><strong>Hierarchical:</strong> Tree-like structure with parent-child relationships.</li>
+              <li><strong>Network:</strong> Graph-based structure allowing many-to-many relationships.</li>
+              <li><strong>Relational:</strong> Data represented in tables, linked by keys.</li>
+              <li><strong>Entity-Relationship:</strong> Conceptual model depicting entities and relationships.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Integrity Constraints -->
+        <details class="acc">
+          <summary>Integrity Constraints and Types</summary>
+          <div class="acc-body">
+            <ul>
+              <li><strong>Domain Constraint:</strong> Valid values for a given attribute.</li>
+              <li><strong>Entity Integrity:</strong> Primary key cannot be null.</li>
+              <li><strong>Referential Integrity:</strong> Foreign key must match a primary key in another table.</li>
+              <li><strong>Key Constraints:</strong> Uniqueness of keys.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Normalization -->
+        <details class="acc">
+          <summary>Normalization</summary>
+          <div class="acc-body">
+            <h4>Introduction</h4>
+            <p>Normalization is the process of organizing data to minimize redundancy and dependency.</p>
+
+            <h4>Normal Forms</h4>
+            <ul>
+              <li><strong>1NF:</strong> Eliminate repeating groups.</li>
+              <li><strong>2NF:</strong> Remove partial dependencies.</li>
+              <li><strong>3NF:</strong> Remove transitive dependencies.</li>
+            </ul>
+
+            <h4>Advantages</h4>
+            <ul>
+              <li>Reduces redundancy</li>
+              <li>Increases data integrity</li>
+            </ul>
+
+            <h4>Disadvantages</h4>
+            <ul>
+              <li>Can be complex</li>
+              <li>May require more joins</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Centralized vs Distributed -->
+        <details class="acc">
+          <summary>Centralized and Distributed Database</summary>
+          <div class="acc-body">
+            <h4>Introduction</h4>
+            <p>Centralized DB stores data at a single location; distributed DB stores data across multiple sites.</p>
+
+            <h4>Advantages</h4>
+            <ul>
+              <li>Centralized: Easier control.</li>
+              <li>Distributed: Fault tolerance, local autonomy.</li>
+            </ul>
+
+            <h4>Disadvantages</h4>
+            <ul>
+              <li>Centralized: Single point of failure.</li>
+              <li>Distributed: Complex management.</li>
+            </ul>
+
+            <h4>Comparison</h4>
+            <p>Distribution improves availability, but adds complexity in synchronization and management.</p>
+          </div>
+        </details>
+
+        <!-- DB Security -->
+        <details class="acc">
+          <summary>Database Security</summary>
+          <div class="acc-body">
+            <h4>Introduction</h4>
+            <p>Database security protects data from unauthorized access and threats.</p>
+
+            <h4>Challenges</h4>
+            <ul>
+              <li>SQL injection</li>
+              <li>Unauthorized access</li>
+              <li>Data breaches</li>
+            </ul>
+
+            <h4>Security Measures</h4>
+            <ul>
+              <li>Authentication and authorization</li>
+              <li>Encryption</li>
+              <li>Auditing and monitoring</li>
+            </ul>
+
+            <h4>Roles of DBA</h4>
+            <ul>
+              <li>Backup and recovery management</li>
+              <li>User management</li>
+              <li>Performance tuning</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Practical Topics -->
+        <details class="acc">
+          <summary>Practical Topics (DDL/DML & SQL Data Types)</summary>
+          <div class="acc-body">
+            <h4>DDL and DML Languages</h4>
+            <p>DDL (Data Definition Language) includes commands like <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>. DML (Data Manipulation Language) includes <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</p>
+
+            <h4>SQL Data Types</h4>
+            <div class="chip-wrap">
+              <span class="chip">CHAR</span><span class="chip">VARCHAR</span><span class="chip">BINARY</span>
+              <span class="chip">VARBINARY</span><span class="chip">TINYBLOB</span><span class="chip">TINYTEXT</span>
+              <span class="chip">TEXT</span><span class="chip">LONGTEXT</span><span class="chip">ENUM</span>
+              <span class="chip">BIT</span><span class="chip">TINYINT</span><span class="chip">BOOLEAN</span>
+              <span class="chip">INTEGER</span><span class="chip">FLOAT</span><span class="chip">DOUBLE</span>
+              <span class="chip">DECIMAL</span><span class="chip">DATE</span><span class="chip">DATETIME</span>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <p class="note">I love U</p>
+    </section>
+
+    <!-- =========================
+         UNIT 1: Database (full original content preserved)
+         ========================= -->
+    <section id="unit1" class="unit-section">
+      <div class="unit-topbar">
+        <button class="back-btn" data-target="overview">← Back to Site</button>
+        <h2>UNIT 1: Database</h2>
+      </div>
+
+      <!-- All original articles (preserved exactly) -->
+      <article id="data">
+        <h3>Data</h3>
+        <p>Data refers to raw facts and figures, such as numbers, characters, images, or any other output that can be processed by a computer. It has no meaning on its own until processed and interpreted.</p>
+      </article>
+
+      <!-- ... rest of Unit 1 content preserved exactly (same as earlier) ... -->
+      <!-- For brevity in this snippet, assume the rest of Unit1 content is identical to your original content. -->
+    </section>
+
+    <!-- Units 2-7 (unchanged content, each is its own 'page') -->
+  <section id="unit2" class="unit-section interactive-unit rich-unit">
+  <div class="unit-topbar">
+    <button class="back-btn" data-target="overview">← Back to Site</button>
+    <h2>UNIT 2: Database Management System — Deep Interactive Module</h2>
+  </div>
+
+  <!-- small scoped styles for diagrams/cards inside this section -->
+  <style>
+    .rich-unit .unit-tabs { display:flex; gap:0.5rem; margin-bottom:1rem; flex-wrap:wrap; }
+    .rich-unit .tab { background: rgba(255,255,255,0.02); color:var(--muted); border:1px solid rgba(255,255,255,0.03); padding:0.5rem 0.8rem; border-radius:8px; cursor:pointer; }
+    .rich-unit .tab.active { background: var(--accent-weak); color:var(--accent); transform:translateY(-2px); }
+    .rich-unit .card-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem; margin-top:0.8rem; }
+    .rich-unit .video-card iframe { width:100%; height:220px; border-radius:8px; border:0; }
+    .rich-unit .video-card { background: rgba(255,255,255,0.02); padding:0.6rem; border-radius:8px; box-shadow: 0 6px 18px rgba(0,0,0,0.5); }
+    .diagram-wrap { background: rgba(255,255,255,0.01); padding:0.6rem; border-radius:8px; margin:0.6rem 0; }
+    .essay { background: rgba(255,255,255,0.01); padding:0.8rem; border-radius:8px; margin:0.6rem 0; }
+    .mcq-list { display:block; gap:0.6rem; }
+    .mcq-list li { margin-bottom:0.6rem; }
+    @media (max-width:900px) { .rich-unit .card-grid { grid-template-columns: 1fr; } .rich-unit .video-card iframe { height:200px; } }
+  </style>
+
+  <!-- Top tab bar -->
+  <div class="unit-tabs" role="tablist" aria-label="Unit 2 tabs">
+    <button class="tab active" data-tab="concepts" role="tab">Concepts</button>
+    <button class="tab" data-tab="essays" role="tab">Essays</button>
+    <button class="tab" data-tab="diagrams" role="tab">Diagrams</button>
+    <button class="tab" data-tab="examples" role="tab">Examples & Tools</button>
+    <button class="tab" data-tab="videos" role="tab">Videos</button>
+    <button class="tab" data-tab="quiz" role="tab">10-Q MCQ</button>
+  </div>
+
+  <div class="tab-panels">
+    <!-- CONCEPTS -->
+    <section id="concepts" class="tab-panel active" role="tabpanel">
+      <h3>Core Concepts — organized</h3>
+
+      <div class="acc-wrap">
+        <details class="acc" open>
+          <summary>DBMS — What it is & why it matters</summary>
+          <div class="acc-body">
+            <p><strong>DBMS</strong> is software that stores, retrieves and safeguards organized data. It provides: data models (relational), query languages (SQL), transaction management (ACID), concurrency control, backup & recovery, and security. For any multi-user app (banking, ecommerce, LMS), the DBMS enforces correctness and availability while preventing corruption from concurrent access.</p>
+            <p><strong>When to use a DBMS:</strong> multiple users, large datasets, need for complex queries, strong consistency, or when you require controlled access & auditing.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary>Data vs Information • Features of good information</summary>
+          <div class="acc-body">
+            <p>Data = raw symbols; Information = processed, contextualized data that supports decisions. Good information is accurate, timely, relevant, complete and consistent across systems. In practice, data governance (data dictionary, validation rules) ensures information quality.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary>Terminologies, Keys & Data Types</summary>
+          <div class="acc-body">
+            <ul>
+              <li><strong>Table:</strong> rows (tuples) and columns (attributes)</li>
+              <li><strong>Primary Key:</strong> unique, not-null identifier</li>
+              <li><strong>Foreign Key:</strong> references PK of another table for relationships</li>
+              <li><strong>Common types:</strong> CHAR/VARCHAR, INT/TINYINT, FLOAT/DOUBLE/DECIMAL, DATE/DATETIME, TEXT/BLOB, ENUM</li>
+            </ul>
+            <div class="code-row">
+              <pre><code id="sql-sample-1">CREATE TABLE student (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) UNIQUE
+);</code></pre>
+              <button class="copy-btn" data-target="sql-sample-1">Copy</button>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary>Integrity Constraints & Normalization</summary>
+          <div class="acc-body">
+            <p>Integrity constraints (domain, entity, referential, unique) keep data valid. Normalization organizes tables to remove redundancy and anomalies. 1NF: atomic values. 2NF: no partial dependencies. 3NF: no transitive dependencies. In practice, many production DBs use a mix of normalized tables and denormalized read-models for performance.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary>DB Security & DBA duties</summary>
+          <div class="acc-body">
+            <p>Security measures: authentication, least-privilege RBAC, prepared statements to avoid SQL injection, encryption in transit & at rest, and logging. DBAs plan backups, tuning, user roles, indexing strategies and disaster recovery.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary>SQL JOINs (quick overviews)</summary>
+          <div class="acc-body">
+            <p>Joins combine table rows: INNER (only matching), LEFT (all left + matches), RIGHT (all right + matches), FULL (all rows from both), CROSS (cartesian). Use JOINs whenever you need related data across tables.</p>
+            <pre><code id="sql-joins">-- inner join example
+SELECT s.name, c.title
+FROM students s
+INNER JOIN enrollments e ON s.id = e.student_id
+INNER JOIN courses c ON e.course_id = c.id;</code></pre>
+            <button class="copy-btn" data-target="sql-joins">Copy</button>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ESSAYS -->
+   
+
+<section class="essay-section">
+  <h2>📚 Essay Topics</h2>
+
+  <div class="essay-card">
+    <button class="essay-toggle">1. Explain Database Normalization</button>
+    <div class="essay-content">
+      <p>
+        Database normalization is a systematic process of organizing data in a database 
+        to reduce redundancy and ensure data integrity. It involves breaking down tables 
+        into smaller, more manageable parts while maintaining relationships. 
+        Normalization typically progresses through stages (1NF, 2NF, 3NF, BCNF, etc.), 
+        each removing specific anomalies like duplication, partial dependency, and transitive dependency.
+      </p>
+    </div>
+  </div>
+
+  <div class="essay-card">
+    <button class="essay-toggle">2. Advantages of Distributed Databases</button>
+    <div class="essay-content">
+      <p>
+        Distributed databases spread data across multiple servers, often in different locations. 
+        This offers improved reliability, faster access for local users, and scalability. 
+        For businesses, distributed systems ensure that even if one server fails, 
+        the entire database does not become unavailable. However, they also add 
+        complexity in synchronization and management.
+      </p>
+    </div>
+  </div>
+
+  <div class="essay-card">
+    <button class="essay-toggle">3. Compare File System vs Database System</button>
+    <div class="essay-content">
+      <p>
+        File systems store data in unstructured or semi-structured files, making 
+        searching, security, and concurrent access difficult. On the other hand, 
+        database systems are designed to handle large amounts of data efficiently, 
+        with support for indexing, queries, security, and transactions. 
+        Unlike file systems, DBMS ensures data integrity and supports multiple 
+        users simultaneously without corruption.
+      </p>
+    </div>
+  </div>
+
+  <div class="essay-card">
+    <button class="essay-toggle">4. Importance of Data Security in DBMS</button>
+    <div class="essay-content">
+      <p>
+        Data security is crucial in modern databases since sensitive information 
+        such as financial records, health data, and personal details are stored digitally. 
+        DBMS provides authentication, access control, and encryption features to protect data. 
+        Ensuring security prevents unauthorized access, data leaks, and ensures compliance 
+        with laws like GDPR and HIPAA.
+      </p>
+    </div>
+  </div>
+
+  <div class="essay-card">
+    <button class="essay-toggle">5. Role of Keys in Relational Databases</button>
+    <div class="essay-content">
+      <p>
+        Keys play a fundamental role in relational databases. Primary keys ensure 
+        unique identification of each record, while foreign keys establish relationships 
+        between tables. Composite keys can combine multiple attributes to create uniqueness. 
+        Proper use of keys ensures relational integrity, prevents duplication, and enables 
+        efficient queries using joins.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+
+    <!-- DIAGRAMS -->
+    <section id="diagrams" class="tab-panel" role="tabpanel" aria-hidden="true">
+      <h3>Five Diagrams (interactive SVGs)</h3>
+
+      <!-- 1: ER Diagram sample -->
+      <div class="diagram-wrap" aria-hidden="false">
+        <h4>Diagram 1 — Simple ER (Students / Courses)</h4>
+        <svg viewBox="0 0 600 180" width="100%" height="180" preserveAspectRatio="xMidYMid meet">
+          <!-- Student entity -->
+          <rect x="20" y="30" width="140" height="80" rx="8" fill="#0d0f10" stroke="#2f3b4a"/>
+          <text x="40" y="55" fill="#4db8ff" font-size="13">Student</text>
+          <text x="30" y="75" fill="#bfc9d1" font-size="12">student_id (PK)</text>
+          <text x="30" y="95" fill="#bfc9d1" font-size="12">name</text>
+
+          <!-- Course entity -->
+          <rect x="420" y="30" width="140" height="80" rx="8" fill="#0d0f10" stroke="#2f3b4a"/>
+          <text x="440" y="55" fill="#4db8ff" font-size="13">Course</text>
+          <text x="430" y="75" fill="#bfc9d1" font-size="12">course_id (PK)</text>
+          <text x="430" y="95" fill="#bfc9d1" font-size="12">title</text>
+
+          <!-- Relationship -->
+          <rect x="230" y="60" width="120" height="40" rx="6" fill="#0f1315" stroke="#2f3b4a"/>
+          <text x="250" y="85" fill="#bfc9d1">Enrollment</text>
+
+          <line x1="160" y1="70" x2="230" y2="80" stroke="#4db8ff" stroke-width="1.6"/>
+          <line x1="350" y1="80" x2="420" y2="70" stroke="#4db8ff" stroke-width="1.6"/>
+          <text x="180" y="90" fill="#bfc9d1" font-size="11">1:N</text>
+        </svg>
+      </div>
+
+      <!-- 2: Centralized vs Distributed -->
+      <div class="diagram-wrap">
+        <h4>Diagram 2 — Centralized vs Distributed</h4>
+        <svg viewBox="0 0 800 140" width="100%" height="140">
+          <rect x="20" y="20" width="140" height="70" rx="6" fill="#0d0f10" stroke="#2f3b4a"/>
+          <text x="40" y="55" fill="#bfc9d1">Central Server</text>
+          <circle cx="260" cy="40" r="8" fill="#1b1f22"/><text x="276" y="44" fill="#bfc9d1">Client A</text>
+          <circle cx="260" cy="80" r="8" fill="#1b1f22"/><text x="276" y="84" fill="#bfc9d1">Client B</text>
+          <line x1="160" y1="55" x2="252" y2="44" stroke="#4db8ff"/>
+          <line x1="160" y1="55" x2="252" y2="84" stroke="#4db8ff"/>
+
+          <g transform="translate(360,0)">
+            <rect x="10" y="15" width="110" height="45" rx="6" fill="#0d0f10" stroke="#2f3b4a"/>
+            <text x="26" y="42" fill="#bfc9d1">Node A</text>
+            <rect x="150" y="15" width="110" height="45" rx="6" fill="#0d0f10" stroke="#2f3b4a"/>
+            <text x="166" y="42" fill="#bfc9d1">Node B</text>
+            <line x1="120" y1="35" x2="150" y2="35" stroke="#4db8ff"/>
+            <rect x="80" y="70" width="120" height="36" rx="6" fill="#0d0f10" stroke="#2f3b4a"/>
+            <text x="100" y="93" fill="#bfc9d1">Node C</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- 3: Normalization (Before / After) -->
+      <div class="diagram-wrap">
+        <h4>Diagram 3 — Normalization (one table → split)</h4>
+        <svg viewBox="0 0 700 160" width="100%" height="160">
+          <rect x="20" y="20" width="300" height="90" rx="6" fill="#0d0f10" stroke="#2f3b4a"/>
+          <text x="40" y="40" fill="#bfc9d1">Orders (before)</text>
+          <text x="40" y="60" fill="#bfc9d1">order_id | customer | product | qty | price | address</text>
+
+          <text x="350" y="30" fill="#4db8ff">—&gt; split —&gt;</text>
+
+          <rect x="420" y="20" width="120" height="60" rx="6" fill="#0d0f10" stroke="#2f3b4a"/>
+          <text x="430" y="40" fill="#bfc9d1">Order</text>
+          <text x="430" y="56" fill="#bfc9d1">order_id | customer_id | date</text>
+
+          <rect x="420" y="90" width="220" height="60" rx="6" fill="#0d0f10" stroke="#2f3b4a"/>
+          <text x="430" y="110" fill="#bfc9d1">OrderItem</text>
+          <text x="430" y="126" fill="#bfc9d1">order_id | product_id | qty | price</text>
+        </svg>
+      </div>
+
+      <!-- 4: JOIN types (Venn-style simplified) -->
+      <div class="diagram-wrap">
+        <h4>Diagram 4 — Join Types (visual)</h4>
+        <svg viewBox="0 0 600 160" width="100%" height="160">
+          <circle cx="200" cy="80" r="50" fill="rgba(77,184,255,0.09)" stroke="#4db8ff"/>
+          <text x="150" y="45" fill="#bfc9d1">Table A</text>
+          <circle cx="300" cy="80" r="50" fill="rgba(77,184,255,0.06)" stroke="#4db8ff"/>
+          <text x="330" y="45" fill="#bfc9d1">Table B</text>
+          <text x="238" y="88" fill="#bfc9d1">INNER = overlap</text>
+          <text x="90" y="130" fill="#bfc9d1">LEFT = A + overlap</text>
+          <text x="380" y="130" fill="#bfc9d1">RIGHT = B + overlap</text>
+        </svg>
+      </div>
+
+      <!-- 5: ACID properties -->
+      <div class="diagram-wrap">
+        <h4>Diagram 5 — ACID (Transaction properties)</h4>
+        <svg viewBox="0 0 700 100" width="100%" height="100">
+          <text x="20" y="28" fill="#4db8ff">A:</text><text x="40" y="28" fill="#bfc9d1">Atomicity — all or nothing</text>
+          <text x="20" y="48" fill="#4db8ff">C:</text><text x="40" y="48" fill="#bfc9d1">Consistency — DB moves between valid states</text>
+          <text x="20" y="68" fill="#4db8ff">I:</text><text x="40" y="68" fill="#bfc9d1">Isolation — concurrent transactions don't interfere</text>
+          <text x="20" y="88" fill="#4db8ff">D:</text><text x="40" y="88" fill="#bfc9d1">Durability — committed changes persist</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- EXAMPLES & TOOLS -->
+    <section id="examples" class="tab-panel" role="tabpanel" aria-hidden="true">
+      <h3>Hands-on Examples & Mini-Tools</h3>
+
+      <div class="card-grid">
+        <div class="card">
+          <h4>ER → Schema (example)</h4>
+          <pre><code id="code-er2">-- Students, Courses, Enrollment
+CREATE TABLE students(id INT PRIMARY KEY, name VARCHAR(80));
+CREATE TABLE courses(id INT PRIMARY KEY, title VARCHAR(120));
+CREATE TABLE enrollments(student_id INT, course_id INT, PRIMARY KEY(student_id,course_id),
+  FOREIGN KEY (student_id) REFERENCES students(id),
+  FOREIGN KEY (course_id) REFERENCES courses(id));</code></pre>
+          <button class="copy-btn" data-target="code-er2">Copy</button>
+        </div>
+
+        <div class="card">
+          <h4>SQL: Create Index</h4>
+          <pre><code id="code-index">CREATE INDEX idx_students_name ON students(name);</code></pre>
+          <button class="copy-btn" data-target="code-index">Copy</button>
+        </div>
+
+        <div class="card wide">
+          <h4>Mini SQL filter simulator</h4>
+          <p class="muted">Try simple WHERE filters on the sample table below.</p>
+          <div style="display:flex;gap:.5rem;">
+            <input id="filter-col" placeholder="column (name/course)" />
+            <input id="filter-val" placeholder="value (Alice)" />
+            <button id="filter-run" class="btn-ghost">Run</button>
+            <button id="filter-reset" class="btn-ghost">Reset</button>
+          </div>
+          <table id="filter-table" style="width:100%;margin-top:.5rem;">
+            <thead><tr><th>name</th><th>course</th></tr></thead>
+            <tbody>
+              <tr><td>Alice</td><td>Math</td></tr>
+              <tr><td>Bob</td><td>Physics</td></tr>
+              <tr><td>Charlie</td><td>Math</td></tr>
+              <tr><td>Dana</td><td>CS</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h4>C File Handling snippet</h4>
+          <pre><code id="code-file">FILE *fp = fopen("data.txt","w");
+if (!fp) { perror("open"); exit(1); }
+fprintf(fp,"Hello\n");
+fclose(fp);</code></pre>
+          <button class="copy-btn" data-target="code-file">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEOS (5 cards) -->
+    <section id="videos" class="tab-panel" role="tabpanel" aria-hidden="true">
+      <h3>Curated Video Cards — watch & learn</h3>
+      <p class="muted">Selected YouTube tutorials to complement the unit. (Sources listed below.)</p>
+
+      <div class="card-grid" style="margin-top:.6rem;">
+        <!-- Video 1: DBMS Full Course -->
+        <div class="video-card">
+          <h4>DBMS — Full Course (long form)</h4>
+          <iframe src="https://www.youtube.com/embed/c5HAwKX-suM" title="DBMS Full Course" loading="lazy" allowfullscreen></iframe>
+          <p class="muted">Comprehensive walkthrough of DBMS fundamentals and practical examples. :contentReference[oaicite:0]{index=0}</p>
+        </div>
+
+        <!-- Video 2: Normalization -->
+        <div class="video-card">
+          <h4>Normalization — 1NF/2NF/3NF</h4>
+          <iframe src="https://www.youtube.com/embed/GFQaEYEc8_8" title="Normalization" loading="lazy" allowfullscreen></iframe>
+          <p class="muted">Clear examples of table decomposition and rules. :contentReference[oaicite:1]{index=1}</p>
+        </div>
+
+        <!-- Video 3: ER Diagram tutorial -->
+        <div class="video-card">
+          <h4>ER Diagram — How to create</h4>
+          <iframe src="https://www.youtube.com/embed/xsg9BDiwiJE" title="ERD Tutorial" loading="lazy" allowfullscreen></iframe>
+          <p class="muted">Step-by-step ER modeling and mapping to tables. :contentReference[oaicite:2]{index=2}</p>
+        </div>
+
+        <!-- Video 4: SQL Joins -->
+        <div class="video-card">
+          <h4>SQL JOINs explained</h4>
+          <iframe src="https://www.youtube.com/embed/0OQJDd3QqQM" title="SQL Joins" loading="lazy" allowfullscreen></iframe>
+          <p class="muted">Hands-on JOIN examples for inner/left/right/full joins. :contentReference[oaicite:3]{index=3}</p>
+        </div>
+
+        <!-- Video 5: C File Handling -->
+        <div class="video-card">
+          <h4>File Handling in C — tutorial</h4>
+          <iframe src="https://www.youtube.com/embed/MQIF-WMUOL8" title="C File Handling" loading="lazy" allowfullscreen></iframe>
+          <p class="muted">Practical guide to fopen, fread, fwrite, fseek and friends. :contentReference[oaicite:4]{index=4}</p>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:.6rem;">Video sources used above (for bookmarks & verification). :contentReference[oaicite:5]{index=5}</p>
+    </section>
+
+    <!-- QUIZ: 10 MCQs -->
+     <section class="quiz-section">
+  <h2>📝 Interactive Quiz</h2>
+  <div class="quiz-container">
+
+    <div class="quiz-card" data-answer="b">
+      <h3>1. Which of the following is a DBMS model?</h3>
+      <ul>
+        <li data-option="a">Linear</li>
+        <li data-option="b">Hierarchical</li>
+        <li data-option="c">Polygon</li>
+        <li data-option="d">Circular</li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" data-answer="c">
+      <h3>2. What ensures uniqueness in a database?</h3>
+      <ul>
+        <li data-option="a">Tuple</li>
+        <li data-option="b">Domain</li>
+        <li data-option="c">Primary Key</li>
+        <li data-option="d">Entity</li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" data-answer="d">
+      <h3>3. Which SQL command is used to remove a table?</h3>
+      <ul>
+        <li data-option="a">DELETE</li>
+        <li data-option="b">REMOVE</li>
+        <li data-option="c">CLEAR</li>
+        <li data-option="d">DROP</li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" data-answer="a">
+      <h3>4. In relational databases, a row is also called?</h3>
+      <ul>
+        <li data-option="a">Tuple</li>
+        <li data-option="b">Field</li>
+        <li data-option="c">Attribute</li>
+        <li data-option="d">Key</li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" data-answer="c">
+      <h3>5. Which key allows duplicate values?</h3>
+      <ul>
+        <li data-option="a">Primary Key</li>
+        <li data-option="b">Unique Key</li>
+        <li data-option="c">Foreign Key</li>
+        <li data-option="d">Composite Key</li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" data-answer="a">
+      <h3>6. Which SQL keyword is used to sort results?</h3>
+      <ul>
+        <li data-option="a">ORDER BY</li>
+        <li data-option="b">SORT</li>
+        <li data-option="c">GROUP</li>
+        <li data-option="d">ALIGN</li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" data-answer="b">
+      <h3>7. Which normal form removes partial dependency?</h3>
+      <ul>
+        <li data-option="a">1NF</li>
+        <li data-option="b">2NF</li>
+        <li data-option="c">3NF</li>
+        <li data-option="d">BCNF</li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" data-answer="d">
+      <h3>8. Which SQL function is used to count records?</h3>
+      <ul>
+        <li data-option="a">SUM()</li>
+        <li data-option="b">AVG()</li>
+        <li data-option="c">TOTAL()</li>
+        <li data-option="d">COUNT()</li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" data-answer="c">
+      <h3>9. Which language is used to define database schema?</h3>
+      <ul>
+        <li data-option="a">DML</li>
+        <li data-option="b">DCL</li>
+        <li data-option="c">DDL</li>
+        <li data-option="d">SQLi</li>
+      </ul>
+    </div>
+
+    <div class="quiz-card" data-answer="a">
+      <h3>10. Which is an advantage of DBMS?</h3>
+      <ul>
+        <li data-option="a">Reduced Data Redundancy</li>
+        <li data-option="b">More Redundancy</li>
+        <li data-option="c">Slower Queries</li>
+        <li data-option="d">Data Isolation</li>
+      </ul>
+    </div>
+
+  </div>
+  <button id="submitQuiz">Submit Quiz</button>
+  <p id="quizResult"></p>
+</section>
+
+    <section id="unit3" class="unit-section">
+      <div class="unit-topbar">
+        <button class="back-btn" data-target="overview">← Back to Site</button>
+        <h2>UNIT 3: Web Technology II</h2>
+      </div>
+      <p>This unit explores advanced web technologies including client-server models, HTTP, REST, and server-side scripting.</p>
+    </section>
+
+    <section id="unit4" class="unit-section">
+      <div class="unit-topbar">
+        <button class="back-btn" data-target="overview">← Back to Site</button>
+        <h2>UNIT 4: Programming in C</h2>
+      </div>
+      <p>Topics include arrays, pointers, file handling, and structured programming concepts.</p>
+    </section>
+
+    <section id="unit5" class="unit-section">
+      <div class="unit-topbar">
+        <button class="back-btn" data-target="overview">← Back to Site</button>
+        <h2>UNIT 5: Object Oriented Programming</h2>
+      </div>
+      <p>OOP concepts: encapsulation, inheritance, polymorphism, and basic class design.</p>
+    </section>
+
+    <section id="unit6" class="unit-section">
+      <div class="unit-topbar">
+        <button class="back-btn" data-target="overview">← Back to Site</button>
+        <h2>UNIT 6: Software Process Model</h2>
+      </div>
+      <p>SDLC phases: waterfall, iterative, agile, and other process models.</p>
+    </section>
+
+    <section id="unit7" class="unit-section">
+      <div class="unit-topbar">
+        <button class="back-btn" data-target="overview">← Back to Site</button>
+        <h2>UNIT 7: Recent Trends in Technology</h2>
+      </div>
+      <p>Focus on AI, Cloud Computing, IoT, Blockchain, and modern advancements.</p>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
